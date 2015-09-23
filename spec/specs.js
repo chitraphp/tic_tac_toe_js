@@ -37,4 +37,25 @@ describe('Board', function() {
      expect(newBoard.find(1,2).ycoordinate).to.equal(newSpace.ycoordinate);
 
     });
+
+    it("finds the space by the coordinates", function() {
+      var newBoard = new Board();
+      var testPlayer = new Player("X");
+      var newSpace = new Space(1,2);
+      var mark = newBoard.find(1,2).mark_by(testPlayer);
+      expect(newBoard.find(1,2).markedBy().playerMark).to.equal("X");
+     });
+
+describe('Game', function() {
+  it("creates two players", function() {
+    var testPlayer1 = new Player("X");
+    var testPlayer2 = new Player("Y");
+    var newBoard = new Board();
+    var newGame = new Game(testPlayer1, testPlayer2, newBoard);
+    expect(newGame.player1.mark()).to.equal("X");
+    expect(newGame.player2.mark()).to.equal("Y");
+    expect(newGame.board.spaces()).to.equal(3);
+  });
+});
+
 });

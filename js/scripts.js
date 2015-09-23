@@ -19,16 +19,6 @@ Space.prototype.markedBy = function() {
   return this.playerMark;
 }
 
-// function numberOfSpaces() {
-//   var array = [];
-//
-//   for (var x = 1;x<=3;x++){
-//     for(var y=1;y<=3;y++)
-//   { array.push(new Space(x,y));
-//     }
-//   }
-//   return array;
-// }
 
 function Board() {
   this.array = [];
@@ -48,6 +38,18 @@ Board.prototype.spaces = function() {
 
 Board.prototype.find = function(xcoordinate, ycoordinate) {
   return this.array[xcoordinate] [ycoordinate];
+}
+
+function Game(player1, player2, board) {
+  this.player1 = player1;
+  this.player2 = player2;
+  this.board = board;
+}
+
+Game.prototype.winner = function() {
+  if((newBoard.find(0,0).mark_by === newBoard.find(0,1).mark_by === newBoard.find(0,2).mark_by) || (newBoard.find(1,0).mark_by === newBoard.find(1,1).mark_by === newBoard.find(1,2).mark_by) || (newBoard.find(2,0).mark_by === newBoard.find(2,1).mark_by === newBoard.find(2,2).mark_by) || (newBoard.find(0,0).mark_by === newBoard.find(0,1).mark_by === newBoard.find(0,2).mark_by)) ;
+  return playerMark; {
+  }
 }
 //
 // $(document).ready(function() {
