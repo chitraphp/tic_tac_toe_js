@@ -47,9 +47,9 @@ function Game(player1, player2, board) {
 }
 
 Game.prototype.winner = function() {
-  if((newBoard.find(0,0).mark_by === newBoard.find(0,1).mark_by === newBoard.find(0,2).mark_by) || (newBoard.find(1,0).mark_by === newBoard.find(1,1).mark_by === newBoard.find(1,2).mark_by) || (newBoard.find(2,0).mark_by === newBoard.find(2,1).mark_by === newBoard.find(2,2).mark_by) || (newBoard.find(0,0).mark_by === newBoard.find(0,1).mark_by === newBoard.find(0,2).mark_by)) ;
-  return playerMark; {
-  }
+  if((newBoard.find(0,0).mark_by === newBoard.find(0,1).mark_by === newBoard.find(0,2).mark_by) || (newBoard.find(1,0).mark_by === newBoard.find(1,1).mark_by === newBoard.find(1,2).mark_by) || (newBoard.find(2,0).mark_by === newBoard.find(2,1).mark_by === newBoard.find(2,2).mark_by) || (newBoard.find(0,0).mark_by === newBoard.find(0,1).mark_by === newBoard.find(0,2).mark_by)) 
+  return playerMark;
+
 }
 //
 // $(document).ready(function() {
