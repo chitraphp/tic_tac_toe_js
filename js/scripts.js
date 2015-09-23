@@ -19,24 +19,36 @@ Space.prototype.markedBy = function() {
   return this.playerMark;
 }
 
-function numberOfSpaces() {
-  var array = [];
+// function numberOfSpaces() {
+//   var array = [];
+//
+//   for (var x = 1;x<=3;x++){
+//     for(var y=1;y<=3;y++)
+//   { array.push(new Space(x,y));
+//     }
+//   }
+//   return array;
+// }
 
-  for (var x = 1;x<=3;x++){
-    for(var y=1;y<=3;y++)
-  { array.push(new Space(x,y));
+function Board() {
+  this.array = [];
+
+  for (var x = 0;x<=2;x++){
+    var row = [];
+    for(var y=0;y<=2;y++)
+  { row.push(new Space(x,y));
     }
+  this.array.push(row);
   }
-  return array;
 }
 
-function Board(numberOfSpaces) {
-  this.numberOfSpaces = numberOfSpaces;
+Board.prototype.spaces = function() {
+  return this.numberOfSpaces = this.array.length;
 }
 
-  Board.prototype.spaces = function() {
-    return this.numberOfSpaces = this.numberOfSpaces.length;
-  }
+Board.prototype.find = function(xcoordinate, ycoordinate) {
+  return this.array[xcoordinate] [ycoordinate];
+}
 //
 // $(document).ready(function() {
 //   $("form#factorial").submit(function(event) {

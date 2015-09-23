@@ -25,9 +25,16 @@ describe('Space', function() {
 });
 
 describe('Board', function() {
-  it("creates 9 spaces when it is initialized", function() {
-    var newSpaces = new numberOfSpaces();
-    var newBoard = new Board(newSpaces);
-    expect(newBoard.spaces()).to.equal(9);
+  it("creates 3 rows when it is initialized", function() {
+    var newBoard = new Board();
+    expect(newBoard.spaces()).to.equal(3);
    });
+
+   it("finds the space by the coordinates", function() {
+     var newBoard = new Board();
+     var newSpace = new Space(1,2);
+     expect(newBoard.find(1,2).xcoordinate).to.equal(newSpace.xcoordinate);
+     expect(newBoard.find(1,2).ycoordinate).to.equal(newSpace.ycoordinate);
+
+    });
 });
